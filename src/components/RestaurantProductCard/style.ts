@@ -3,8 +3,9 @@ import { Cores } from '../../styles'
 
 export const CardContainer = styled.div`
   width: 320px;
+  min-height: 340px;
   border: 8px solid ${Cores.vermelho};
-  background-color: ${Cores.bege};
+  background-color: ${Cores.vermelho};
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -21,6 +22,7 @@ export const Info = styled.div`
   color: ${Cores.bege};
   display: flex;
   flex-direction: column;
+  flex: 1;
 `
 
 export const Title = styled.h3`
@@ -43,6 +45,7 @@ export const Button = styled.button`
   padding: 8px 12px;
   cursor: pointer;
   font-weight: bold;
+  margin-top: auto;
 
   &:hover {
     background-color: ${Cores.branco};

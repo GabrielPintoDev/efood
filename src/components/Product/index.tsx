@@ -1,3 +1,4 @@
+// ...existing code...
 import { Link } from 'react-router-dom'
 import React from 'react'
 import {
@@ -14,19 +15,21 @@ import {
 } from './style'
 
 interface RestaurantCardProps {
+  id: number
   image: string
   name: string
   description: string
   rating: number
-  tags: string[]
+  tags?: string[]
 }
 
 const RestaurantCard: React.FC<RestaurantCardProps> = ({
+  id,
   image,
   name,
   description,
   rating,
-  tags
+  tags = []
 }) => {
   return (
     <CardContainer>
@@ -45,14 +48,15 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({
           <Rating>{rating.toFixed(1)} ⭐</Rating>
         </TitleRow>
         <Description>{description}</Description>
-        <Button>
-          <Link to="/loja" className="link">
-            Saiba mais
-          </Link>
-        </Button>
+
+        {/* Link envolve o Button em vez do contrário */}
+        <Link to={`/restaurante/${id}`} className="link">
+          <Button>Saiba mais</Button>
+        </Link>
       </CardBody>
     </CardContainer>
   )
 }
 
 export default RestaurantCard
+// ...existing code...

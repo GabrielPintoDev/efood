@@ -5,13 +5,20 @@ export const Banner = styled.div`
   position: relative;
   height: 280px;
   overflow: hidden;
-`
-
-export const Image = styled.img`
-  width: 100%;
-  height: 100%;
   object-fit: cover;
-  filter: brightness(0.7);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: ${Cores.branco};
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+    z-index: 0;
+  }
 `
 
 export const TextContainer = styled.div`
@@ -22,7 +29,6 @@ export const TextContainer = styled.div`
   position: absolute;
   bottom: 0px;
   left: 270px;
-  color: ${Cores.branco};
 `
 
 export const Type = styled.h3`
