@@ -1,13 +1,13 @@
-import Header from '../../components/Header'
-import ProductList from '../../components/ProductList'
+import { Footer } from '../../components/SubComponents/Footer'
+import { Body } from '../../components/Home/HomeBody'
+import { Header } from '../../components/Home/HomeHeader'
 
-const Home = () => (
-  <>
-    <Header />
-    <div className="container">
-      <ProductList />
-    </div>
-  </>
-)
-
-export default Home
+export const Home = () => {
+  return (
+    <>
+      <Header />
+      <Body />
+      <Footer />
+    </>
+  )
+}

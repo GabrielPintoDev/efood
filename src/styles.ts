@@ -1,30 +1,27 @@
 import { createGlobalStyle } from 'styled-components'
 
-export const Cores = {
-  vermelho: '#E66767',
-  vermelho2: '#e44',
-  begeBG: '#FFF8F2',
-  bege: '#FFEBD9',
-  branco: '#fff'
+export const Colors = {
+  TitleColor: '#E66767',
+  BackgroundColor: '#FFF8F2',
+  SecondaryBackground: '#FFEBD9',
 }
 
-export const GlobalCss = createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Roboto, sans-serif;
-    list-style: none;
-    text-decoration: none;
-  }
+export const Styles = createGlobalStyle`
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+        list-style: none;
+      }
 
-  .container {
-    max-width: 1024px;
-    width: 100%;
-    margin: 0 auto;
-  }
+      body {
+      background-color: ${Colors.BackgroundColor};
+    }
 
-  body {
-    background-color: ${Cores.begeBG};
-  }
+    .container {
+      max-width: 1024px;
+    }
+
+
 `
